@@ -31,6 +31,9 @@ solenoid_angle = 30;
 
 
 // Main geometry
+
+color("blue")translate([0,-150,0])section_2();
+
 color("pink")translate([0,0,0])align_pin();
 translate([0,-15,0])difference(){
     setup1();
@@ -41,6 +44,7 @@ translate([0,-15,0])difference(){
 //translate([0,-base_depth/4,2])sphere(d=golfball_diameter+golfball_rest_offset);
 module setup1(){
     // comment out for build
+    //allow for 
     //translate([0,21.25,-25])stepperCase();
     // comment out for build
     //translate([0,-100,-20])solenoid();
@@ -51,7 +55,7 @@ module setup1(){
     //translate([0,21.25,-25])stepperCase();
     //color("red")flipper_recess();
     //section();
-    //color("red")translate([9,-10,-8])rotate([0,0,290])flipper();
+    color("red")translate([9,-10,-8])rotate([0,0,290])flipper();
     //translate([-28,-10,10])golf_ball();
     //translate([-13,-50,micro_run_level])micro_run();
     }
@@ -78,6 +82,14 @@ module section(){
     difference(){
         base();
         translate([0,0,run_opening/4])divert();
+        }
+    }
+
+module section_2(){
+    difference(){
+        base_2();
+        translate([0,0,20])for (i=[0:40])
+            translate([i-20,0,0])run(i+1);
         }
     }
 
@@ -111,6 +123,11 @@ module run_false() {
 module base() {
     color("green")cube([base_width,base_depth,base_height], true);
 }
+
+module base_2() {
+    color("green")cube([base_width,base_depth,base_height], true);
+}
+
 
 module stepperCam(){
     hull() {
