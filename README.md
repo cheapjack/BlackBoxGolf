@@ -17,3 +17,25 @@ Players act out instructions provided on the box on the day, that fellow players
 The black box can be deployed as a kit for future crazy golf at Barrow Park and the conditional system can change each time.
 
 Like much of the tech we all depend on, this hole promises alot, but ultimately provides very little; obscuring hidden communities of humans and non-humans who maintain the infrastructures they depend on.
+
+### Black Box activity
+
+Players judge a true or false button press based on some foldscope/Microscope activity.
+
+#### Euglena Cosplay
+
+<img src="images/pdms_vinyl_euglena.jpg" width="600">
+
+Euglena Cosplay is the activity used to qualify true or false conditions in the black box golf ball.
+
+ * Enter golf ball into box
+ * Observe Euglena down *Microscope Alley* with  foldscopes and reclaimed microscopes or failing that on the [model organisms webpage](https://domesticscience.org.uk/criticalkits/euglena.html)
+   * They observe Euglena in silicon microfluidic channels moulded from the grooves of Cumbrian charity shop records, a method for model organism observation developed by microbiologist, biotechnologist and engineer [Alexandre Benedetto](https://www.lancaster.ac.uk/health-and-medicine/about-us/people/alexandre-benedetto) inspired by an article in [The Worm Breeders Gazette](http://wbg.wormbook.org/2017/07/18/immobilizing-nematodes-for-live-imaging-using-an-agarose-pad-generated-with-a-vinyl-record/)
+    * Wear a Euglena costume and mime their behaviour
+    * If you're too embarassed wear a Euglena truckers cap
+ * Get judged by co-players
+ * Hit `true` or `false` buttons
+ * Golf ball released:
+   * `true`: easy access to next hole
+   * `false`: Down a camping stove/ recycled PLA windshield maze
+

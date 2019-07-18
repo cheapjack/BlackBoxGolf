@@ -9,10 +9,16 @@ stepper_width = 13.5;
 stepper_depth = 23.5;
 //includes all the way up to just under the cam assembly
 stepper_height = 26;
+// measure this before printing
+stepper_pin_height = 8;
+stepper_pin_depth = 8;
+
 
 base_width = 160;
 base_depth = 90;
 base_height = 76;
+
+short_run_length = base_width/2;
 
 run_opening = 70;
 run_leaving = 55;
@@ -29,16 +35,30 @@ solenoid_pin_diameter = 1.5;
 solenoid_pin_length = 6;
 solenoid_angle = 30;
 
+// To Do
+
+// golf ball release
+// recess for electronics
+
 
 // Main geometry
+/*
+color("blue")translate([0,-108,0])difference(){
+    section_2(30);
+    translate([0,-7,10])golf_ball(1.15);
+    }
+*/
+// Flipper for printing
+//color("red")translate([0,0,0])rotate([0,0,0])flipper();
 
-color("blue")translate([0,-150,0])section_2();
-
-color("pink")translate([0,0,0])align_pin();
+//color("pink")translate([0,0,0])align_pin();
 translate([0,-15,0])difference(){
     setup1();
-    translate([0,21.25,-25])stepperCase();
+    translate([0,21.25,-26])stepperCase();
 }
+
+//color("red")stepperCase();
+
 
 //color("blue")translate([0,22,10])stepperCase();
 //translate([0,-base_depth/4,2])sphere(d=golfball_diameter+golfball_rest_offset);
@@ -55,29 +75,32 @@ module setup1(){
     //translate([0,21.25,-25])stepperCase();
     //color("red")flipper_recess();
     //section();
-    color("red")translate([9,-10,-8])rotate([0,0,290])flipper();
+    //color("red")translate([9,-10,-8])rotate([0,0,290])flipper();
     //translate([-28,-10,10])golf_ball();
     //translate([-13,-50,micro_run_level])micro_run();
     }
     
+// module for checking alignment and M sized fixing
 module align_pin(){
     rotate([180,0,0])cylinder($fn=24,h=150,r=1.5,center=true);
 }
     
-
+// recess for a solenoid ball push
+// may be removed for another stepper.
 module solenoid() {
     rotate([360+solenoid_angle,0,0])cube([solenoid_case_width,solenoid_case_depth,solenoid_case_height], true);
     rotate([360+solenoid_angle,0,0])translate([0,(solenoid_case_depth-1),0])rotate([90,0,0])cylinder($fn=12,solenoid_pin_length,r=solenoid_pin_diameter,true);
 }
 
-
+// 3 cylendrical golfball runs divert true or false
 module divert() {
     translate([0,-50,run_level])run();
     rotate([-run_angle,0,0])translate([-divert_offset,0,0])run_true();
     rotate([-run_angle,0,0])translate([divert_offset,0,0])run_false();
 }
 
-// Base geometry
+
+// Main section with Base geometry & golf runs removed
 module section(){
     difference(){
         base();
@@ -85,14 +108,26 @@ module section(){
         }
     }
 
-module section_2(){
+// A section for holding and releasing the ball, iterated cylinders
+module section_2(spread){
     difference(){
         base_2();
-        translate([0,0,20])for (i=[0:40])
-            translate([i-20,0,0])run(i+1);
+        rotate([0,0,0])translate([0,-25,28])for (i=[0:spread]){
+            translate([i-spread/2,0,0])short_run(i+1);
+            //rotate([-1 * run_angle,0,0])translate([i-spread/2,0,0])short_run(i+1);
+           } //translate([i-spread/2,0,0])short_run(i+1);
         }
     }
 
+// Shorter cylinder for golf run with parameters
+module short_run(){
+    rotate([270+run_angle,0,0])cylinder(h=short_run_length,r=run_opening/2,center=true);
+    translate([0,base_depth/2,0])rotate([270-run_angle,0,0])cylinder(h=short_run_length-10,r=run_opening/2,center=true);
+    //rotate([270,0,0])cylinder(h=short_run_length,r=run_opening/2,center=true);
+}
+
+
+// section with flipper recess
 module section_flipper_recessed(){
         difference(){
             section();
@@ -100,35 +135,46 @@ module section_flipper_recessed(){
             }
     }
 
-
-module golf_ball(){
-    sphere(d=golfball_diameter+golfball_rest_offset);
+// average golf ball size
+module golf_ball(scale){
+    sphere(d=(scale*golfball_diameter) + golfball_rest_offset);
 }
         
 //translate([0,0,run_opening/4])rotate([270,0,0])run();
 
+// Basic cylindrical golf run 
 module run() {
     rotate([270,0,0])cylinder(h=run_length,r1=run_opening/2,r2=run_leaving/2,center=true);
 }
 
+
+
+// First bit of the flipper section
+module pre_run() {
+    rotate([270,0,0])cylinder(h=run_length,r1=run_opening/2,r2=run_leaving/2,center=true);
+}
+
+// golf run true direction
 module run_true() {
     rotate([0,0,20])run();
     }
 
+// golf run false direction
 module run_false() {
     rotate([0,0,-20])run();
     }
 
-
+// Big chunk o' PLA
 module base() {
     color("green")cube([base_width,base_depth,base_height], true);
 }
 
+// another chunk not sure why
 module base_2() {
     color("green")cube([base_width,base_depth,base_height], true);
 }
 
-
+// cam hull 
 module stepperCam(){
     hull() {
         circle($fn = 24,d = 11.5);
@@ -136,9 +182,10 @@ module stepperCam(){
         }
     }
 
-
+// the main stepper case with the cam bits
 module stepperCase(){
-    cube([stepper_width,stepper_depth,stepper_height], true);
+    cube([stepper_width,stepper_depth + stepper_pin_depth,stepper_height], true);
+    //cube([stepper_width,stepper_depth + stepper_pin_depth,stepper_height - stepper_pin_height], true);
     translate([0,stepper_depth/-2 + 5.25,stepper_height/2+2])
     difference(){
         stepperCamAssembly();
@@ -146,14 +193,15 @@ module stepperCase(){
     }
 }
 
+// The Cam bits
 module stepperCamAssembly(){
         linear_extrude(height = 6, center = true, convexity = 0, twist = 0)stepperCam();
 }
 
-//Flipper
+// Imported Flipper from https://www.thingiverse.com/thing:1789
 module flipper(){
     flipper_scalar = 1.25;
-    scale([flipper_scalar,flipper_scalar,1.5])import("builds/files/flipper.stl", convexity=3);
+    scale([flipper_scalar,flipper_scalar,1.5])import("builds/flipper/files/flipper.stl", convexity=3);
 }
 
 //Flipper recess
