@@ -18,5 +18,5 @@ In this golf hole a classic black box has a space for your decisions based on lo
  * **black** will send you on a more difficult putting course to the next hole.
  * **white** Will send you to the easy route to the next hole!
  * Thanks for playing!
- * If you want to know how this was made visit github.com/cheapjack/BlackBoxGolf
+ * If you want to know how this was made visit `github.com/cheapjack/BlackBoxGolf`
 
