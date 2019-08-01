@@ -16,7 +16,14 @@ In this golf hole a classic black box has a space for your decisions based on lo
 * **Act** out what you oberve with your body. Use the green Euglena Onesies (one Large, one Small) to help you!
  * Get someone playing with you to **judge** how well you do and press the **black** or **white** based on your performance.
  * **PRESS** **black** will send you on a more difficult putting course to the next hole.
- * ***PRESS** *white** Will send you to the easy route to the next hole!
+ * **PRESS** *white** Will send you to the easy route to the next hole!
  * Thanks for playing!
  * If you want to know how this was made **visit** `github.com/cheapjack/BlackBoxGolf`
 
+## Euglena gracilis
+
+Euglena is a genus of single celled flagellate eukaryotics. Species of Euglena are found in freshwater and salt water. They are often abundant in quiet inland waters where they may bloom in numbers sufficient to color the surface of ponds and ditches green. 
+
+The species we are looking at Euglena gracilis has been used extensively in the laboratory as a model organism. Interestingly they can photosynthesise like plants but can eat and move like animals, with an 'eye pit' to sense light which they move toward, blurring the boundary between plant and animal. 
+
+Today you can see them on specially prepared microscope slides, where they swim around tiny microscopic channels. These channels have been made by pouring silicon into the grooves of vinyl records, a cheap way of isolating individual model organisms of this size and is a technique developed by Alexandre Benedetto a researcher & lecturer at Lancaster University.  
