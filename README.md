@@ -2,7 +2,7 @@
 Make files, instructions and details of a Science & Technology Studies Crazy Golf hole for [Full Of Noises 2019](http://fonfestival.org/event/full-of-noises-2019-09-11-08-19/) in Barrow Park, Barrow-in-Furness
 
 <img src="images/euglena_cosplay.jpg" width="400">
-<img src="images/Model.png" width="400">
+<img src="images/model2.png" width="400">
 
 ## Premise
 
