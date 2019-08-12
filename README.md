@@ -39,3 +39,7 @@ Euglena Cosplay is the activity used to qualify true or false conditions in the 
    * `true`: easy access to next hole
    * `false`: Down a camping stove/ recycled PLA windshield maze
 
+# How To Build
+
+In quite the opposite spirit to black boxing, read [the basic guide to build it yourself](HowToBuild.md). Arduino abstractions of `C++`, how capacitors, pull up resistors, ground referencing etc work alongwith 300 years of microscopic practice and the physics of ball lenses remain in the black boxes we need them to be in to play this kind of non-human observing crazy golf. 
+
