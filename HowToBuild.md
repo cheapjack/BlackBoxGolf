@@ -20,6 +20,8 @@ The 3d printed parts sat on the threaded spacers and the nylon gave some flexibi
 
 ## Arduino and Wiring
 
+<img src="images/BlackBox_bb.png" width="400">
+
 2 [Sanwa style arcade buttons](https://www.ebay.co.uk/itm/Genuine-White-Sanwa-SDM-18-Snap-In-Arcade-Button-18mm-Mounting-Hole/392317047559) triggers servos controlled by arduinio standard servo library and also lit up a large 10mm LED to indicate a successful button press. Refer to the Arduino code and wiring diagram provided
 
 We used bell wire to run cabling from the underside of the arcade buttons (soldered on) to the solderless wires on the breadboard and did everything else wiring wise using coloured coded jump wires. The main thing to note is to power the 2 5V servos seperately from the arudino but with a shared ground reference. So 4 x AAA 1.5v batteries is adequate and a 9V battery powers the arduino. These need external on/off switches but we only had time to provide space to access the battery packs. This should be added alongwith a veroboard soldered breadboard or shield for a more robust build. However a solderless breadboard build worked really well.
