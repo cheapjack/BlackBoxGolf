@@ -15,5 +15,5 @@
 20|A5|Instruction Pamphlet|[C3](https://zenithprintgroup.com/c3-imaging/)|20.00|<ul><li>[x] </li>|<ul><li>[ ] </li>
 1|1000mAh|Solar USB Battery|amazon|18.98|<ul><li>[x] </li>|<ul><li>[ ] </li>
 5|600x300mm|Black<br>Acryliv|[Hobarts](https://hobarts.com/3mm-black-cast-acrylic)|42.00|<ul><li>[x] </li>|<ul><li>[x] </li>
-|||||Total|195.36
+|||||Total|187.34
 
