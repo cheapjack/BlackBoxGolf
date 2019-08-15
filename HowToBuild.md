@@ -6,6 +6,10 @@ In quite the opposite spirit to black boxing, here is a basic guide to build it 
 
 We used 3mm Black Acrylic (see [BOM.md](BOM.md) ) to make the box using [MakerCase](https://www.makercase.com/)
 
+We used these [lasercutting design files](https://github.com/cheapjack/BlackBoxGolf/tree/master/box) to cut out a snap fit black acrylic box to fit some nice 3d printed internals. Note the holes in the base for threading through nylon standoffs and spacers, and the Domestic Science logo. You may need to offset the cut paths if your acrylic is not quite 3mm thick by between 0.05-0.1mm depending on your material if you want a snap fit. Hobarts supply pretty consistent thickness, again listed in the [BOM](BOM.md) but you might prefer a local supplier.
+
+We've made 3 artwork sheets in the [sheets directory](https://github.com/cheapjack/BlackBoxGolf/tree/master/box/sheets) that will provide the box and some ramps and internal guides for the battery packs 
+
 ## Golf Ball internals
 
 We used the Core.scad file to generate 3 parts using [OpenSCAD](http://www.openscad.org) to make `.stl` files which we then used Cura to generate gcode for an Ultimaker 2+ 3d printer usign 4mm PLA filament on gradual 0-80% infill.
