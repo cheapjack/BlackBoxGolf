@@ -50,11 +50,12 @@ solenoid_recess_scalar = 1.1;
 // Main geometry            //
 //////////////////////////////
 
-translate([0,150,0])print("red");
-//print("blue");
-//hprint("green");
+//translate([0,0,0])print("red");
+translate([0,-150,0])print("yellow");
+print("green");
+print("blue");
 //servo_arm(1,1.5);
-translate([-143,100,22])rotate([0,0,270])servo_arm(1.1,2);
+//translate([-143,-45,22])rotate([0,0,270])servo_arm(1.1,2);
 //servo_arm(1.2,1.5);
 //translate([-servo_width/2,-135,-18])rotate([90,90,180])servoCase(true);
 
@@ -67,6 +68,8 @@ module print(state){
         blue();
     } else if (state=="green"){
         green();
+    } else if (state=="yellow"){
+        yellow();
     } else {
     }
 }
@@ -75,6 +78,12 @@ module print(state){
 // 
 // Section 1
 // Uncomment when printing
+
+module yellow(){
+    color("red")import("builds/Pinball_Adaptor.stl", convexity=3);
+}
+
+
 module green(){
     translate([0,0,base_height/2])difference(){
     mainBox();
