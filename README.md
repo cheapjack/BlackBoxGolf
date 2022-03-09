@@ -1,18 +1,16 @@
 # Black Box Golf
 Make files, instructions and details of a Science & Technology Studies Crazy Golf hole for [Full Of Noises 2019](http://fonfestival.org/event/full-of-noises-2019-09-11-08-19/) in Barrow Park, Barrow-in-Furness
 
-<img src="images/euglena_cosplay.jpg" width="400">
-<img src="images/model2.png" width="400">
+![Participant dressed as Euglena, Fritzing Model and 3D CAD for internals](images/ImageMontage.png)
 
 ## Premise
 
-Black Boxing is where a very complicated technology (like a computer or a bank) effectively becomes a box hiding how it really works: all we know as black box users is we put something in and expect something to come out. Most of the things we use every day can be seen like this.
-
-We thought it would be fun to think about a black box on a golf course.
-
-This is not to be confused with the Italo House recording outfit successful in the 1990's. To cite Science Studies scholar Bruno Latour, blackboxing is *"the way scientific and technical work is made invisible by its own success. When a machine runs efficiently, when a matter of fact is settled, one need focus only on its inputs and outputs and not on its internal complexity. Thus, paradoxically, the more science and technology succeed, the more opaque and obscure they become."* <sup>1</sup> 
+Black Boxing is where a very complicated technology (like a computer or a bank) effectively becomes a box hiding how it really works: all we know as black box users is we put something in and expect something to come out. Most of the things we use every day can be seen like this. We thought it would be fun to think about a black box on a golf course.
 
 Science studies is a really useful way of thinking about how science affects society. In Barrow in Furness we can see many ways that science affects our social world; BAE relies on some of the more problematic of scientific developments (weapons & defence) but has a big affect on the local socio-economic world, while many coastal and agricultural sciences have a big role in the town through local industry and agriculture. 
+
+To cite Science Studies scholar Bruno Latour, blackboxing is *"the way scientific and technical work is made invisible by its own success. When a machine runs efficiently, when a matter of fact is settled, one need focus only on its inputs and outputs and not on its internal complexity. Thus, paradoxically, the more science and technology succeed, the more opaque and obscure they become."* <sup>1</sup> 
+
 
 It's also good at not just thinking about big global science issues but how things work locally. We wanted to use the golf course as a space to think about how hidden non-human creatures like algae live really close to us, despite living in quite a tightly controlled industrial and agricultural environment. Generally we're too busy surviving in our social worlds to stop and think about tiny creatures, but some family time playing crazy golf might be a nice easy way to think about microbiology. Though of course the important thing is to complete your game in as few shots as possible; and if you follow our black box activity instructions carefully we might help you win and learn about the microscopic world of algae and how scientists use model organisms!
 
